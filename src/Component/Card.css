@@ -1,0 +1,41 @@
+.maincard{
+
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    background: #FFFFFF;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.maincard .icon{
+    height: 60px !important;
+    width: 60px !important;
+    display: flex;
+    align-items: center;
+    background-color: #F4F7FE;
+    justify-content: center;
+    border-radius: 100px;
+    margin:10px
+}
+
+.maincard .icon svg{
+    width: 4em;
+    height: 3em;
+    color:#422AFB;
+}
+.maincard .info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+justify-content: space-between;
+margin-right:25px;
+}
+.info h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.info h2{
+    font-size: 1.2rem;
+    font-weight:600;;
+}

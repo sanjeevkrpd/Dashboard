@@ -1,0 +1,13 @@
+
+
+
+.ant-menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; 
+    margin-left: 5% !important;
+    margin-top: 12px !important;  
+  }
+  
