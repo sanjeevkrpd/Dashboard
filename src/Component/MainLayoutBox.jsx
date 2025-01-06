@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Layout } from "antd";
 
 
@@ -17,6 +17,28 @@ const MainLayoutBox = () => {
 
   const expandedWidth = 270;
   const collapsedWidth = 80;
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) { 
+        setCollapsed(true);
+      } else {
+        setCollapsed(false);
+      }
+    };
+
+  
+    window.addEventListener('resize', handleResize);
+
+ 
+    handleResize();
+
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Layout style={{ minHeight: "100vh" }}>
@@ -65,7 +87,7 @@ const MainLayoutBox = () => {
               marginLeft: "20px",
             }}
           >
-            <RouteContent/>
+            <RouteContent />
           </Content>
         </Layout>
       </Layout>

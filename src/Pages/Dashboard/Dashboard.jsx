@@ -14,13 +14,16 @@ import {
 import { CiDeliveryTruck, CiRoute } from "react-icons/ci";
 import { PiKeyReturnBold } from "react-icons/pi";
 import { TbCancel, TbTax } from "react-icons/tb";
-import ConversionTable from "../../Component/Table/Table";
 import HistogramChart from "../../Component/Charts/HistogramChart";
 import CardBox from "../../Component/Charts/CardBox";
 import LineChart from "../../Component/Charts/LineChart";
+import TopUser from "../../Component/Table/TopUser";
 
+import Piecharts from "../../Component/Charts/Piecharts";
+import CenterBox from "../../Component/Charts/CenterBox";
 
-
+import TopSeller from "../../Component/Table/TopSeller";
+import MyCalendar from "../../Component/MyCalender";
 
 const Dashboard = () => {
   return (
@@ -61,8 +64,6 @@ const Dashboard = () => {
               heading={"Total Customers"}
               money={"154"}
             />
-
- 
           </SimpleGrid>
 
           <SimpleGrid
@@ -108,57 +109,102 @@ const Dashboard = () => {
             />
           </SimpleGrid>
 
-        
-     
-      <Box>
+          <Box>
+            <SimpleGrid
+              columns={{ base: 1, md: 1, lg: 1, "2xl": 2 }}
+              gap="20px"
+              mb="20px"
+              style={{ backgroundColor: "#F4F7FE" }}
+            >
+              <CardBox>
+                <HistogramChart />
+              </CardBox>
 
-      <SimpleGrid
-    columns={{ base: 1, md: 1, lg: 1, "2xl": 2 }}
-    gap="20px"
-    mb="20px"
-    style={{backgroundColor : "#F4F7FE"}}
-    >
-    
+              <CardBox>
+                <LineChart />
+              </CardBox>
+            </SimpleGrid>
+          </Box>
 
-     <CardBox>
-     <HistogramChart/>
-     </CardBox>
-     
-     <CardBox>
-     <LineChart/>
-     </CardBox>
-    </SimpleGrid>
+          <h2
+            className="content-title"
+            style={{ fontSize: "24px", fontWeight: 500, marginBottom: "10px" }}
+          >
+            Admin Wallet
+          </h2>
 
+          <Box>
+            <SimpleGrid
+              columns={{ base: 1, md: 3, lg: 3, "2xl": 5 }}
+              gap="20px"
+              mb="20px"
+            >
+              <Card
+                icon={<MdBarChart />}
+                heading={"Earnings"}
+                money={"₹642"}
+                ht={"80px"}
+              />
+              <Card
+                icon={<MdCurrencyRupee />}
+                heading={"Commission Earned"}
+                money={"₹642.39"}
+                ht={"90px"}
+              />
+              <Card
+                icon={<GiFoodTruck />}
+                heading={"Delivery charge earned"}
+                money={"₹642.39"}
+              />
+              <Card
+                icon={<GiTakeMyMoney />}
+                heading={"Total Tax Collected"}
+                money={"₹642.39"}
+              />
+              <Card
+                icon={<TbTax />}
+                heading={"Pending Amount"}
+                money={"₹642.39"}
+              />
+            </SimpleGrid>
 
-    </Box>
+            <Box>
+              <SimpleGrid
+                columns={{ base: 1, md: 1, lg: 2, "2xl": 3 }}
+                gap="20px"
+                mb="20px"
+                style={{ backgroundColor: "#F4F7FE" }}
+              >
+                <CardBox>
+                  <TopUser />
+                </CardBox>
 
+                <CardBox>
+                  <CenterBox>
+                    <Piecharts />
+                  </CenterBox>
+                </CardBox>
+                <CardBox>
+                  <CenterBox>
+                   <MyCalendar/>
+                  </CenterBox>
+                </CardBox>
+              </SimpleGrid>
+            </Box>
 
-    <h2 className="content-title" style={{fontSize : "24px" , fontWeight : 500 , marginBottom : "10px" }}>Admin Wallet</h2>
-
-<Box>
- <SimpleGrid
-     columns={{ base: 1, md: 3, lg: 3, "2xl": 5 }}
-     gap="20px"
-     mb="20px"
- 
- >
-   <Card
-    icon={<MdBarChart />}
-    heading={"Earnings"}
-    money={"₹642"}
-    ht={"80px"}
-  />
- <Card icon={<MdCurrencyRupee/>} heading={'Commission Earned'} money={"₹642.39"} ht={"90px"}/>
- <Card icon={<GiFoodTruck/>} heading={'Delivery charge earned'} money={"₹642.39"}/>
- <Card icon={<GiTakeMyMoney/>} heading={'Total Tax Collected'} money={"₹642.39"}/>
-  <Card icon={<TbTax/>} heading={'Pending Amount'} money={"₹642.39"}/> 
-
-
-
- </SimpleGrid>
-
-</Box>
-
+            <Box>
+              <SimpleGrid
+                columns={{ base: 1, md: 1, lg: 1, "2xl": 1 }}
+                gap="20px"
+                mb="20px"
+                style={{ backgroundColor: "#F4F7FE" }}
+              >
+                <CardBox>
+                  <TopSeller />
+                </CardBox>
+              </SimpleGrid>
+            </Box>
+          </Box>
         </Box>
       </div>
     </>

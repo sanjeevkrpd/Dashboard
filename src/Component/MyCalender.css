@@ -1,0 +1,20 @@
+.custom-calendar{
+    border: none !important;
+    width: 400px !important;
+    line-height: 2em !important;
+   
+}
+
+.react-calendar__tile--active {
+    background: #006edc;
+    color: white;
+    border-radius: 16px;
+}
+abbr[title] {
+    border-bottom: none;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: none !important;
+}

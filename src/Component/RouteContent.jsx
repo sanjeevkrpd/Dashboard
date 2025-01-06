@@ -11,7 +11,7 @@ const RouteContent = () => {
           path="/"
           element={
             <ProtectedRoutes>
-              <Dashboard />
+              <Dashboard  />
             </ProtectedRoutes>
           }
         />

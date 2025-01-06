@@ -1,0 +1,11 @@
+.apexcharts-legend-series{
+    display: none !important;
+}
+
+
+foreignObject {
+    x: 0;
+    y: 0;
+    width: 450;
+    height: 350 !important;
+}

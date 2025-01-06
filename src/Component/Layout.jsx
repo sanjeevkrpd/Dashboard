@@ -23,7 +23,7 @@ const Layout = () => {
       <div style={{ display: 'flex', flex: 1 }}>
         <MenuList/>
         <div style={{ flex: 1, padding: '20px', backgroundColor: '#f5f5f5' }}>
-        <RouteContent/>
+        <RouteContent dateAdapter={AdapterDayjs}/>
         </div>
       </div>
     </div>
